@@ -17,7 +17,7 @@ const createPredefinedUser = async () => {
       console.log(' Predefined user created successfully!');
     }
   } catch (err) {
-    console.error('Error creating predefined user:', err);
+    console.error('Error creating a predefined user:', err);
   }
 };
 
