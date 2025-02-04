@@ -1,6 +1,6 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 
-// Create a slice for user authentication
+
 const userSlice = createSlice({
   name: 'user',
   initialState: {
@@ -27,7 +27,7 @@ const userSlice = createSlice({
   },
 });
 
-// Create a slice for car form data
+
 const carSlice = createSlice({
   name: 'car',
   initialState: {
@@ -37,19 +37,19 @@ const carSlice = createSlice({
   reducers: {
     addCarSuccess: (state, action) => {
       state.carDetails = action.payload;
-      state.errorMessage = ''; // Clear any error message if submission is successful
+      state.errorMessage = ''; 
     },
     addCarFailure: (state, action) => {
-      state.errorMessage = action.payload; // Set error message in case of failure
+      state.errorMessage = action.payload; 
     },
   },
 });
 
-// Export actions for both user and car slices
+
 export const { loginSuccess, loginFailure, logout } = userSlice.actions;
 export const { addCarSuccess, addCarFailure } = carSlice.actions;
 
-// Configure the Redux store with the reducers from both slices
+
 export const store = configureStore({
   reducer: {
     user: userSlice.reducer,
