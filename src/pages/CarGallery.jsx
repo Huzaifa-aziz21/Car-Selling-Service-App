@@ -25,7 +25,7 @@ function CarGallery() {
       setCars(cars.filter(car => car._id !== id));
       alert('Car deleted successfully.');
     } catch (err) {
-      alert('Failed to delete car.');
+      alert('Failed to delete a car.');
     }
   };
 
