@@ -5,9 +5,8 @@ const carSchema = new mongoose.Schema({
   price: { type: Number, required: true },
   phoneNumber: { type: String, required: true },
   maxPictures: { type: Number, required: true },
-  images: [String],
-  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }, // Reference to User model
-});
+  images: [String], 
+  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }, 
+}, { timestamps: true });
 
 module.exports = mongoose.model('Car', carSchema);
-
